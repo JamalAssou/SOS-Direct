@@ -129,7 +129,7 @@ button { font-family: var(--font); }
 .slide__overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,25,55,.75) 0%, rgba(0,70,110,.45) 100%); }
 .slide__content { position: relative; z-index: 1; padding: 0 2rem; max-width: 640px; }
 @media (min-width: 768px) { .slide__content { margin-left: 6vw; } }
-.slide__title { font-size: clamp(2rem, 5.5vw, 3.8rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1rem; text-shadow: 0 2px 12px rgba(0,0,0,.3); }
+.slide__title { font-size: 50px; font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 1rem; text-shadow: 0 2px 12px rgba(0,0,0,.3); }
 .slide__title span { color: #7de0ff; }
 .slide__sub { font-size: clamp(.95rem, 1.8vw, 1.15rem); color: rgba(255,255,255,.88); margin-bottom: 2rem; }
 .slide__content--center { text-align: center; margin: 0 auto; max-width: 700px; left: 0; right: 0; display: flex; flex-direction: column; align-items: center; }
@@ -253,7 +253,7 @@ button { font-family: var(--font); }
 .dep__header { text-align: center; max-width: 720px; margin: 0 auto 3rem; display: flex; flex-direction: column; align-items: center; gap: .75rem; }
 .dep__split { display: grid; gap: 2rem; align-items: start; }
 @media (min-width: 860px) { .dep__split { grid-template-columns: 1fr 1fr; } }
-.dep__blue-card { background: linear-gradient(160deg, #0091D5 0%, #005f99 100%); border-radius: var(--radius); padding: 2rem; color: var(--white); display: flex; flex-direction: column; gap: 1rem; }
+.dep__blue-card { background: linear-gradient(135deg, rgba(0, 145, 213, 0.88), rgba(0, 95, 153, 0.95)), url('../images/hero-1.jpg') center/cover; border-radius: var(--radius); padding: 3rem 2rem; color: var(--white); display: flex; flex-direction: column; gap: 1rem; box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,0.2); }
 .dep__emergency-phone { display: flex; align-items: center; gap: .5rem; font-size: 1.1rem; font-weight: 700; background: rgba(255,255,255,.15); border-radius: 50px; padding: .5rem 1.25rem; align-self: center; }
 .dep__worker-img { text-align: center; padding: 1rem 0; }
 .dep__blue-card h3 { font-size: 1.3rem; font-weight: 800; }

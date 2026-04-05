@@ -163,6 +163,42 @@ button {
   justify-content: center;
 }
 
+.btn--hero-call {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--hero-call::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  opacity: 0;
+}
+
+.btn--hero-call:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.btn--hero-call:hover svg {
+  animation: shakeAndRing 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes shakeAndRing {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(15deg) scale(1.1); }
+  50% { transform: rotate(0deg) scale(1.1); }
+  75% { transform: rotate(-15deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1.1); }
+}
+
 /* === SECTION COMMON === */
 .section {
   padding: 5rem 0;
@@ -278,10 +314,9 @@ button {
   border: 1px solid #fca5a5;
 }
 
-/* === TOPBAR === */
 .topbar {
-  background: var(--g800);
-  color: var(--g400);
+  background: var(--blue);
+  color: var(--white);
   font-size: .82rem;
   height: var(--topbar-h);
   display: flex;
@@ -305,26 +340,33 @@ button {
   display: flex;
   align-items: center;
   gap: .35rem;
-  color: var(--g400);
-  transition: color var(--ease);
+  color: var(--white);
+  opacity: 0.9;
+  transition: opacity var(--ease);
 }
 
 .topbar__link:hover {
-  color: var(--white);
+  opacity: 1;
 }
 
 .topbar__social {
   display: flex;
   gap: .75rem;
+  margin-left: auto;
 }
 
 .topbar__social a {
-  color: var(--g400);
-  transition: color var(--ease);
+  color: var(--white);
+  opacity: 0.9;
+  transition: opacity var(--ease), transform var(--ease);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topbar__social a:hover {
-  color: var(--white);
+  opacity: 1;
+  transform: scale(1.15);
 }
 
 /* === HEADER === */
@@ -509,7 +551,9 @@ button {
   background-position: center;
   opacity: 0;
   transform: scale(1.04);
-  transition: opacity .8s ease, transform .8s ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .8s ease, transform .8s ease, visibility .8s;
   display: flex;
   align-items: center;
 }
@@ -517,17 +561,21 @@ button {
 .slide--active {
   opacity: 1;
   transform: scale(1);
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 10;
 }
 
 .slide__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 25, 55, .75) 0%, rgba(0, 70, 110, .45) 100%);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .slide__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 0 2rem;
   max-width: 640px;
 }
@@ -544,7 +592,7 @@ button {
   color: var(--white);
   line-height: 1.1;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .3);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 .slide__title span {
@@ -553,8 +601,10 @@ button {
 
 .slide__sub {
   font-size: clamp(.95rem, 1.8vw, 1.15rem);
-  color: rgba(255, 255, 255, .88);
+  color: var(--white);
+  font-weight: 500;
   margin-bottom: 2rem;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .slide__content--center {
@@ -1543,6 +1593,37 @@ button {
 @media (min-width: 900px) {
   .footer__inner {
     grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.footer__certifications {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__certifications img {
+  width: 100%;
+  height: auto;
+  max-width: 160px;
+  max-height: 80px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem;
+  border-radius: 8px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer__certifications {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

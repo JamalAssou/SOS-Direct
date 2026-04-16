@@ -318,7 +318,8 @@ button {
   background: var(--blue);
   color: var(--white);
   font-size: .82rem;
-  height: var(--topbar-h);
+  min-height: var(--topbar-h);
+  padding: 0.25rem 0;
   display: flex;
   align-items: center;
 }
@@ -334,6 +335,7 @@ button {
   display: flex;
   gap: 1.25rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .topbar__link {
@@ -429,8 +431,8 @@ button {
 }
 
 .header__nav {
-  position: fixed;
-  top: calc(var(--topbar-h) + var(--header-h));
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
   background: var(--white);
@@ -587,7 +589,7 @@ button {
 }
 
 .slide__title {
-  font-size: 50px;
+  font-size: clamp(2rem, 6vw, 50px);
   font-weight: 800;
   color: var(--white);
   line-height: 1.1;
@@ -662,7 +664,7 @@ button {
 /* Slider dots */
 .slider__dots {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

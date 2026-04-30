@@ -16,8 +16,8 @@ const translations = {
         "hero_slide3_title": "TRAITEMENT D’HUMIDITÉ ET ISOLATION DE VOTRE HABITATION",
         "hero_btn_call": "0484 826 826",
         "hero_slide1_desc": "Nous réalisons un diagnostic pour votre habitation et nous vous proposons la meilleure solution tout en respectant votre budget.",
-        "hero_slide2_desc": "Bénéficiez des primes jusqu'à 30% du montant total de vos Travaux. Nous respectons votre budget !",
-        "hero_slide3_desc": "Un diagnostic précis et des solutions durables pour une maison saine. Nos techniciens qualifiés interviennent rapidement à votre service.",
+        "hero_slide2_desc": "Un diagnostic précis et des solutions durables pour une maison saine. Nos techniciens qualifiés interviennent rapidement à votre service.",
+        "hero_slide3_desc": "Bénéficiez des primes jusqu'à 30% du montant total de vos Travaux. Nous respectons votre budget !",
 
         // === SLOGAN & ARGUMENTS ===
         "slogan_title": "Concentrez-vous sur ce que vous aimez faire !",
@@ -255,8 +255,8 @@ const translations = {
         "hero_slide3_title": "VOCHTSTRUDING EN ISOLATIE VAN UW WONING",
         "hero_btn_call": "0484 826 826",
         "hero_slide1_desc": "Wij voeren een diagnose uit voor uw woning en stellen de beste oplossing voor binnen uw budget.",
-        "hero_slide2_desc": "Geniet van premies tot 30% van het totale bedrag van uw werken. Wij respecteren uw budget!",
-        "hero_slide3_desc": "Een nauwkeurige diagnose en duurzame oplossingen voor een gezond huis. Onze gekwalificeerde technici staan snel voor u klaar.",
+        "hero_slide2_desc": "Een nauwkeurige diagnose en duurzame oplossingen voor een gezond huis. Onze gekwalificeerde technici staan snel voor u klaar.",
+        "hero_slide3_desc": "Geniet van premies tot 30% van het totale bedrag van uw werken. Wij respecteren uw budget!",
 
         // === SLOGAN & ARGUMENTS ===
         "slogan_title": "Focus op wat u graag doet!",
@@ -494,8 +494,8 @@ const translations = {
         "hero_slide3_title": "HUMIDITY TREATMENT AND HOME INSULATION",
         "hero_btn_call": "0484 826 826",
         "hero_slide1_desc": "We carry out a diagnosis for your home and propose the best solution while respecting your budget.",
-        "hero_slide2_desc": "Benefit from grants up to 30% of the total amount of your works. We respect your budget!",
-        "hero_slide3_desc": "An accurate diagnosis and durable solutions for a healthy home. Our qualified technicians intervene quickly at your service.",
+        "hero_slide2_desc": "An accurate diagnosis and durable solutions for a healthy home. Our qualified technicians intervene quickly at your service.",
+        "hero_slide3_desc": "Benefit from grants up to 30% of the total amount of your works. We respect your budget!",
 
         // === SLOGAN & ARGUMENTS ===
         "slogan_title": "Focus on what you love doing!",

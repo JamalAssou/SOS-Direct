@@ -62,6 +62,18 @@
     sections.forEach(s => obs.observe(s));
   }
 
+  /* ─── ACTIVE NAV ON SUB-PAGES ─── */
+  const path = window.location.pathname;
+  if (path.includes('/services/')) {
+    navLinks.forEach(l => l.classList.remove('active'));
+    const svcLink = document.querySelector('.nav-link[data-i18n="nav_services"]');
+    if (svcLink) svcLink.classList.add('active');
+  } else if (path.includes('/primes')) {
+    navLinks.forEach(l => l.classList.remove('active'));
+    const primesLink = document.querySelector('.nav-link[data-i18n="nav_primes"]');
+    if (primesLink) primesLink.classList.add('active');
+  }
+
   /* ─── HERO SLIDER ─── */
   const slides   = Array.from(document.querySelectorAll('.slide'));
   const dots     = Array.from(document.querySelectorAll('.slider__dot'));

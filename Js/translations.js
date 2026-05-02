@@ -51,6 +51,10 @@ const translations = {
         "btn_plus_details": "Plus de détails",
         "btn_tous_services": "Voir tous les services",
 
+        // === EXPERTISE BAND ===
+        "expertise_title": "SOS Direct, société spécialiste dans la construction et la rénovation",
+        "expertise_text": "Avec une expérience de plus de <strong>20 ans</strong> dans le domaine, notre équipe peut vous proposer la meilleure solution pour vos projets de <strong>Gros œuvre</strong> ou rénovation <strong>INTÉRIEURE</strong> et <strong>FAÇADE</strong>. L'isolation de votre habitation est devenue une priorité, c'est pour cela que SOS Direct s'est spécialisée dans tous types d'isolation. Nous établirons un bilan complet de votre habitation (perte énergétique, état des murs, humidité, fuite corniche, état de vos châssis…). <strong>Notre diagnostic correct</strong> nous permet de vous proposer une meilleure offre selon votre budget en garantissant une solution définitive au problème.",
+
         // === SECTION PRIMES ===
         "primes_tag": "Financement",
         "primes_title": "M'aider pour ma prime énergétique",
@@ -290,6 +294,10 @@ const translations = {
         "btn_plus_details": "Meer details",
         "btn_tous_services": "Bekijk alle diensten",
 
+        // === EXPERTISE BAND ===
+        "expertise_title": "SOS Direct, gespecialiseerd bedrijf in bouw en renovatie",
+        "expertise_text": "Met meer dan <strong>20 jaar ervaring</strong> in het vakgebied kan ons team u de beste oplossing voorstellen voor uw projecten van <strong>ruwbouw</strong> of <strong>BINNENRENOVATIE</strong> en <strong>GEVEL</strong>. De isolatie van uw woning is een prioriteit geworden, daarom heeft SOS Direct zich gespecialiseerd in alle soorten isolatie. Wij maken een volledig rapport van uw woning op (energieverlies, staat van de muren, vochtigheid, lekken aan de kroonlijst, staat van uw ramen…). <strong>Onze correcte diagnose</strong> stelt ons in staat u een beter aanbod te doen volgens uw budget en een definitieve oplossing voor het probleem te garanderen.",
+
         // === SECTION PRIMES ===
         "primes_tag": "Financiering",
         "primes_title": "Hulp bij mijn energiepremie",
@@ -528,6 +536,10 @@ const translations = {
         "svc_elec_desc": "Installation, renovation, compliance certification, and internet network infrastructure.",
         "btn_plus_details": "More details",
         "btn_tous_services": "View all services",
+
+        // === EXPERTISE BAND ===
+        "expertise_title": "SOS Direct, a company specializing in construction and renovation",
+        "expertise_text": "With over <strong>20 years of experience</strong> in the field, our team can offer you the best solution for your <strong>structural work</strong> or <strong>INTERIOR</strong> and <strong>FACADE</strong> renovation projects. Insulating your home has become a priority, which is why SOS Direct has specialized in all types of insulation. We will carry out a complete assessment of your home (energy loss, wall condition, humidity, cornice leaks, window frame condition…). <strong>Our accurate diagnosis</strong> allows us to offer you a better deal based on your budget while guaranteeing a definitive solution to the problem.",
 
         // === SECTION GRANTS (PRIMES) ===
         "primes_tag": "Financing",

@@ -81,32 +81,60 @@
   const btnNext  = document.getElementById('sliderNext');
   let current    = 0;
   let timer      = null;
+  let animating  = false;
   const INTERVAL = 5000;
 
-  function go(idx) {
-    slides[current].classList.remove('slide--active');
+  function go(idx, direction) {
+    if (animating || slides.length < 2) return;
+    const next = (idx + slides.length) % slides.length;
+    if (next === current) return;
+    animating = true;
+
+    const dir = direction || (next > current ? 'left' : 'right');
+    const oldSlide = slides[current];
+    const newSlide = slides[next];
+
+    // Remove previous exit classes from all slides
+    slides.forEach(s => s.classList.remove('slide--exit-left', 'slide--exit-right'));
+
+    // Position the new slide off-screen on the correct side (no transition)
+    newSlide.style.transition = 'none';
+    newSlide.style.transform = dir === 'left' ? 'translateX(100%)' : 'translateX(-100%)';
+    newSlide.offsetHeight; // force reflow
+
+    // Re-enable transition and animate
+    newSlide.style.transition = '';
+    newSlide.style.transform = '';
+    newSlide.classList.add('slide--active');
+
+    // Exit the old slide
+    oldSlide.classList.remove('slide--active');
+    oldSlide.classList.add(dir === 'left' ? 'slide--exit-left' : 'slide--exit-right');
+
+    // Update dots
     dots[current].classList.remove('slider__dot--active');
     dots[current].setAttribute('aria-selected', 'false');
-    current = (idx + slides.length) % slides.length;
-    slides[current].classList.add('slide--active');
-    dots[current].classList.add('slider__dot--active');
-    dots[current].setAttribute('aria-selected', 'true');
+    dots[next].classList.add('slider__dot--active');
+    dots[next].setAttribute('aria-selected', 'true');
+
+    current = next;
+    setTimeout(() => { animating = false; }, 650);
   }
 
   function startAuto() {
     stopAuto();
-    timer = setInterval(() => go(current + 1), INTERVAL);
+    timer = setInterval(() => go(current + 1, 'left'), INTERVAL);
   }
   function stopAuto() { clearInterval(timer); }
 
   if (slides.length > 1) {
     // Flèches
-    if (btnPrev) btnPrev.addEventListener('click', () => { stopAuto(); go(current - 1); startAuto(); });
-    if (btnNext) btnNext.addEventListener('click', () => { stopAuto(); go(current + 1); startAuto(); });
+    if (btnPrev) btnPrev.addEventListener('click', () => { stopAuto(); go(current - 1, 'right'); startAuto(); });
+    if (btnNext) btnNext.addEventListener('click', () => { stopAuto(); go(current + 1, 'left'); startAuto(); });
 
     // Dots
     dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => { stopAuto(); go(i); startAuto(); });
+      dot.addEventListener('click', () => { stopAuto(); go(i, i > current ? 'left' : 'right'); startAuto(); });
     });
 
     // Swipe tactile
@@ -116,7 +144,7 @@
       sliderEl.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
       sliderEl.addEventListener('touchend', e => {
         const dx = e.changedTouches[0].clientX - touchX;
-        if (Math.abs(dx) > 50) { stopAuto(); go(dx < 0 ? current + 1 : current - 1); startAuto(); }
+        if (Math.abs(dx) > 50) { stopAuto(); go(dx < 0 ? current + 1 : current - 1, dx < 0 ? 'left' : 'right'); startAuto(); }
       }, { passive: true });
     }
 

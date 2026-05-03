@@ -32,6 +32,7 @@ const translations = {
         // === SERVICES (GRILLE) ===
         "services_tag": "Notre expertise",
         "services_title": "Nos Services",
+        "services_sub": "Rénovation, isolation, façade et dépannage — SOS Direct couvre l'ensemble de vos besoins partout en Belgique.",
         "svc_renov_title": "Rénovations intérieures & Gros œuvre",
         "svc_renov_desc": "Sanitaire, chauffage, électricité, peinture, carrelage, cuisine. Suivi complet de A à Z.",
         "svc_facade_title": "Façades & Ravalement",
@@ -90,6 +91,7 @@ const translations = {
 
         // === SECTION DEPANNAGE ===
         "dep_tag": "Service d'urgence",
+        "dep_sub": "Nos corps de métier sont constitués <span class='text-blue'>d'hommes et de femmes extrêmement qualifiés</span> et ils sont prêts à intervenir immédiatement.",
         "dep_h3": "SOS Direct 24h/24!",
         "dep_p1": "Un dépannage rapide avec un diagnostic correct et complet !",
         "dep_p2": "Vous avez besoin d'aide, appelez-nous maintenant nous serons ravis de trouver une solution rapide. Nos techniciens sont disponibles immédiatement!",
@@ -275,6 +277,7 @@ const translations = {
         // === SERVICES (GRILLE) ===
         "services_tag": "Onze expertise",
         "services_title": "Onze Diensten",
+        "services_sub": "Renovatie, isolatie, gevel en depannage — SOS Direct dekt al uw behoeften in heel België.",
         "svc_renov_title": "Binnenrenovatie & Ruwbouw",
         "svc_renov_desc": "Sanitair, verwarming, elektriciteit, schilderwerken, vloeren, keuken. Volledige opvolging van A tot Z.",
         "svc_facade_title": "Gevels & Renovatie",
@@ -333,6 +336,7 @@ const translations = {
 
         // === SECTION DEPANNAGE ===
         "dep_tag": "Nooddienst",
+        "dep_sub": "Onze vakgebieden bestaan uit <span class='text-blue'>uiterst gekwalificeerde mannen en vrouwen</span> die klaarstaan om onmiddellijk in te grijpen.",
         "dep_h3": "SOS Direct 24u/24!",
         "dep_p1": "Een snelle herstelling met een correcte en volledige diagnose!",
         "dep_p2": "Hulp nodig? Bel ons nu, we vinden graag een snelle oplossing. Onze technici zijn onmiddellijk beschikbaar!",
@@ -518,6 +522,7 @@ const translations = {
         // === SERVICES (GRID) ===
         "services_tag": "Our Expertise",
         "services_title": "Our Services",
+        "services_sub": "Renovation, insulation, facade and emergency repair — SOS Direct covers all your needs throughout Belgium.",
         "svc_renov_title": "Interior Renovations & Structural Work",
         "svc_renov_desc": "Sanitary, heating, electricity, painting, tiling, kitchen. Full A to Z management.",
         "svc_facade_title": "Facades & Refurbishment",
@@ -576,6 +581,7 @@ const translations = {
 
         // === SECTION EMERGENCY (DEPANNAGE) ===
         "dep_tag": "Emergency Service",
+        "dep_sub": "Our workforce consists of <span class='text-blue'>highly qualified men and women</span> who are ready to intervene immediately.",
         "dep_h3": "SOS Direct 24/7!",
         "dep_p1": "Fast repair with a correct and complete diagnosis!",
         "dep_p2": "Need help? Call us now; we'll be happy to find a quick solution. Our qualified technicians are available immediately!",

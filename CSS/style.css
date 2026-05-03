@@ -556,18 +556,29 @@ button {
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0;
-  transform: scale(1.04);
+  transform: translateX(100%);
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .8s ease, transform .8s ease, visibility .8s;
+  transition: transform .6s cubic-bezier(.4, 0, .2, 1), visibility .6s;
   display: flex;
   align-items: center;
+  will-change: transform;
+}
+
+.slide--exit-left {
+  transform: translateX(-100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.slide--exit-right {
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .slide--active {
-  opacity: 1;
-  transform: scale(1);
+  transform: translateX(0);
   visibility: visible;
   pointer-events: auto;
   z-index: 10;
@@ -2163,4 +2174,84 @@ button {
 
 .modal-cta {
   margin-top: 1.5rem;
+}
+
+/* === MOBILE FIXES === */
+@media (max-width: 768px) {
+  /* Primes PDF button centered on mobile */
+  .modal-prime-box .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Primes band: stack content on mobile */
+  .primes-band {
+    padding: 3.5rem 0;
+  }
+
+  .primes-band__content {
+    text-align: center;
+  }
+
+  .primes-band__content .btn {
+    display: inline-block;
+    width: auto;
+  }
+
+  /* Slide text padding on small screens */
+  .slide__content {
+    padding: 0 1.5rem;
+  }
+
+  .slide__content--center {
+    max-width: 100%;
+  }
+
+  .slide__title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  /* Expertise band mobile */
+  .expertise-band {
+    padding: 3rem 0;
+  }
+
+  .expertise-band__icon {
+    padding: 1rem;
+  }
+
+  /* Service cards: full width */
+  .modal-body {
+    padding: 1.5rem !important;
+  }
+
+  .modal-stats {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide__content {
+    padding: 0 1rem;
+  }
+
+  .slide__title {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+  }
+
+  .slide__sub {
+    font-size: .9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn--lg {
+    padding: .75rem 1.5rem;
+    font-size: .9rem;
+  }
+
+  /* Primes stats 1 column on very small */
+  .primes-band__stats {
+    grid-template-columns: 1fr;
+  }
 }

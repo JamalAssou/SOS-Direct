@@ -492,6 +492,17 @@ button {
   margin: .75rem auto 0;
 }
 
+/* Hide lang selector on mobile; visible only inside open nav or on desktop */
+.lang-selector-li {
+  display: none;
+}
+
+.header__nav.open .lang-selector-li {
+  display: flex;
+  justify-content: center;
+  padding: .75rem 0;
+}
+
 @media (min-width: 900px) {
   .header__burger {
     display: none;
@@ -643,18 +654,18 @@ button {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background: rgba(255, 255, 255, .15);
-  border: 2px solid rgba(255, 255, 255, .4);
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid rgba(255, 255, 255, .3);
   color: var(--white);
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--ease);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(1px);
 }
 
 .slider__arrow:hover {

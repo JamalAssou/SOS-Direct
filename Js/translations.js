@@ -91,6 +91,7 @@ const translations = {
 
         // === SECTION DEPANNAGE ===
         "dep_tag": "Service d'urgence",
+        "dep_title": "Un Dépannage Rapide avec un <span class='text-blue'>Diagnostic Correct et Complet</span>",
         "dep_sub": "Nos corps de métier sont constitués <span class='text-blue'>d'hommes et de femmes extrêmement qualifiés</span> et ils sont prêts à intervenir immédiatement.",
         "dep_h3": "SOS Direct 24h/24!",
         "dep_p1": "Un dépannage rapide avec un diagnostic correct et complet !",
@@ -336,6 +337,7 @@ const translations = {
 
         // === SECTION DEPANNAGE ===
         "dep_tag": "Nooddienst",
+        "dep_title": "Een Snelle Herstelling met een <span class='text-blue'>Correcte en Volledige Diagnose</span>",
         "dep_sub": "Onze vakgebieden bestaan uit <span class='text-blue'>uiterst gekwalificeerde mannen en vrouwen</span> die klaarstaan om onmiddellijk in te grijpen.",
         "dep_h3": "SOS Direct 24u/24!",
         "dep_p1": "Een snelle herstelling met een correcte en volledige diagnose!",
@@ -581,6 +583,7 @@ const translations = {
 
         // === SECTION EMERGENCY (DEPANNAGE) ===
         "dep_tag": "Emergency Service",
+        "dep_title": "Fast Repair with a <span class='text-blue'>Correct and Complete Diagnosis</span>",
         "dep_sub": "Our workforce consists of <span class='text-blue'>highly qualified men and women</span> who are ready to intervene immediately.",
         "dep_h3": "SOS Direct 24/7!",
         "dep_p1": "Fast repair with a correct and complete diagnosis!",
